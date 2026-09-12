@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Naturally Useless</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =====================================================
+         RANDOM PLANNING / BREAKING NEWS NOTIFICATION
+         ===================================================== -->
+
+    <div id="newsToast" class="newsToast hidden">
+
+        <div class="newsTop">
+
+            <strong>
+                🚨 BREAKING PLANNING NOTICE
+            </strong>
+
+            <button
+                class="newsClose"
+                onclick="closeNews()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="newsDepartment"
+            class="newsDepartment">
+            📋 Department of Unnecessary Affairs
+        </div>
+
+
+        <h3 id="newsHeadline">
+            IMPORTANT NOTICE ABOUT NOTHING
+        </h3>
+
+
+        <p id="newsText">
+            Something completely unnecessary has happened.
+        </p>
+
+
+        <div class="newsSource">
+            Department of Unnecessary Affairs
+            • Totally Imaginary News
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         BREAKING NEWS TICKER
+         ===================================================== -->
+
+    <div
+        id="newsTicker"
+        class="newsTicker hidden">
+
+        <strong>
+            🚨 BREAKING:
+        </strong>
+
+        <span id="tickerText">
+            Important useless news...
+        </span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HOME SCREEN
+         ===================================================== -->
+
+    <section
+        id="homeScreen"
+        class="screen">
+
+        <div class="hero">
+
+            <div class="logo">
+                🌿
+            </div>
+
+
+            <h1>
+                NATURALLY
+                <span>USELESS</span>
+            </h1>
+
+
+            <p class="tagline">
+                Teaching animals Skills for better placement.
+            </p>
+
+
+            <p class="description">
+                Welcome to the world's most unnecessary
+                animal skill development platform.
+            </p>
+
+
+            <button
+                class="mainButton"
+                onclick="showAnimals()">
+
+                🚀 START TRAINING
+
+            </button>
+
+
+            <div class="uselessBadge">
+                🤡 100% UNNECESSARY
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ANIMAL SELECTION SCREEN
+         ===================================================== -->
+
+    <section
+        id="animalScreen"
+        class="screen hidden">
+
+        <div class="container">
+
+
+            <button
+                class="backButton"
+                onclick="goHome()">
+
+                ← Back
+
+            </button>
+
+
+            <h2>
+                Choose Your Student
+            </h2>
+
+
+            <p>
+                Select an animal and teach it something
+                for getting highest LPA.
+            </p>
+
+
+            <div class="animalCards">
+
+
+                <!-- SQUIRREL -->
+
+                <div
+                    class="animalCard"
+                    onclick="startGame('squirrel')">
+
+                    <div class="animalEmoji">
+                        🐿️
+                    </div>
+
+                    <h3>
+                        Squirrel
+                    </h3>
+
+                    <p>
+                        Tree Climbing
+                    </p>
+
+                    <span>
+                        Difficulty: 🤡
+                    </span>
+
+                </div>
+
+
+
+                <!-- FISH -->
+
+                <div
+                    class="animalCard"
+                    onclick="startGame('fish')">
+
+                    <div class="animalEmoji">
+                        🐟
+                    </div>
+
+                    <h3>
+                        Fish
+                    </h3>
+
+                    <p>
+                        Swimming
+                    </p>
+
+                    <span>
+                        Difficulty: 🤡🤡
+                    </span>
+
+                </div>
+
+
+
+                <!-- BIRD -->
+
+                <div
+                    class="animalCard"
+                    onclick="startGame('bird')">
+
+                    <div class="animalEmoji">
+                        🐦
+                    </div>
+
+                    <h3>
+                        Bird
+                    </h3>
+
+                    <p>
+                        Flying
+                    </p>
+
+                    <span>
+                        Difficulty: 🤡🤡🤡
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PLANNING NOTICE HISTORY
+                 ================================================= -->
+
+            <div class="historyBox">
+
+                <div class="historyHeader">
+
+                    <h3>
+                        📋 Planning Notice History
+                    </h3>
+
+                    <strong>
+                        Notices:
+                        <span id="newsCount">
+                            0
+                        </span>
+                    </strong>
+
+                </div>
+
+
+                <div id="noticeHistory">
+
+                    <div class="emptyHistory">
+                        No unnecessary emergencies yet...
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GAME SCREEN
+         ===================================================== -->
+
+    <section
+        id="gameScreen"
+        class="screen hidden">
+
+
+        <!-- GAME HEADER -->
+
+        <div class="gameHeader">
+
+
+            <button
+                class="backButton"
+                onclick="goAnimals()">
+
+                ← Exit
+
+            </button>
+
+
+            <div>
+
+                <h2 id="gameTitle">
+                    Training
+                </h2>
+
+
+                <p id="gameSubtitle">
+                    Training your animal...
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GAME INFORMATION -->
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                ⭐ Score
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat">
+
+                ❤️ Lives
+
+                <strong id="lives">
+                    3
+                </strong>
+
+            </div>
+
+
+            <div class="stat">
+
+                ⏱️ Time
+
+                <strong id="timer">
+                    30
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SQUIRREL GAME
+             ================================================= -->
+
+        <div
+            id="squirrelGame"
+            class="gameArea hidden">
+
+
+            <div class="instructions">
+
+                🐿️ Click the branches in the correct order!
+
+            </div>
+
+
+            <div class="tree">
+
+
+                <div class="trunk">
+                </div>
+
+
+
+                <button
+                    class="branch squirrelBranch b1"
+                    onclick="squirrelClimb(1)">
+
+                    🌿
+
+                </button>
+
+
+                <button
+                    class="branch squirrelBranch b2"
+                    onclick="squirrelClimb(2)">
+
+                    🌿
+
+                </button>
+
+
+                <button
+                    class="branch squirrelBranch b3"
+                    onclick="squirrelClimb(3)">
+
+                    🌿
+
+                </button>
+
+
+                <button
+                    class="branch squirrelBranch b4"
+                    onclick="squirrelClimb(4)">
+
+                    🌿
+
+                </button>
+
+
+                <button
+                    class="branch squirrelBranch b5"
+                    onclick="squirrelClimb(5)">
+
+                    🌿
+
+                </button>
+
+                 <button
+                    class="branch squirrelBranch b6"
+                    onclick="squirrelClimb(6)">
+
+                    🌿
+
+                </button>
+
+
+                <button
+                    class="branch squirrelBranch b7"
+                    onclick="squirrelClimb(7)">
+
+                    🌿
+
+                </button>
+                <button
+                    class="branch squirrelBranch b8"
+                    onclick="squirrelClimb(8)">
+
+                    🌿
+
+                </button>
+
+
+                <div id="squirrel">
+                    🐿️
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FISH GAME
+             ================================================= -->
+
+        <div
+            id="fishGame"
+            class="gameArea hidden">
+
+
+            <div class="instructions">
+
+                🐟 Use the arrow keys to help the fish
+                reach the food!
+
+            </div>
+
+
+            <div class="water">
+
+
+                <div class="bubble bubble1">
+                    ○
+                </div>
+
+
+                <div class="bubble bubble2">
+                    ○
+                </div>
+
+
+                <div class="bubble bubble3">
+                    ○
+                </div>
+
+                <div class="bubble bubble3">
+                    ○
+                </div>
+
+                <div class="bubble bubble3">
+                    ○
+                </div>
+
+
+                <div
+                    class="fish"
+                    id="fish">
+
+                    🐟
+
+                </div>
+
+
+
+                <div
+                    class="food"
+                    id="food">
+
+                    🦐
+
+                </div>
+
+
+
+                <div class="rock rock1">
+                    🪨
+                </div>
+
+
+                <div class="rock rock2">
+                    🪨
+                </div>
+
+
+            </div>
+
+
+            <p class="keyboardHint">
+
+                ⬆️ ⬇️ ⬅️ ➡️
+                Use your keyboard
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BIRD GAME
+             ================================================= -->
+
+        <div
+            id="birdGame"
+            class="gameArea hidden">
+
+
+            <div class="instructions">
+                   🐦 The bird is falling! 
+                   <br>
+                       SPACE = Fly Up &nbsp; | &nbsp;
+                       ← → = Move Left / Right
+            </div>
+
+
+            <div class="sky">
+
+
+                <div id="bird">
+                    🐦
+                </div>
+
+
+
+                <div class="cloud cloud1">
+                    ☁️
+                </div>
+
+
+                <div class="cloud cloud2">
+                    ☁️
+                </div>
+
+
+                <div class="cloud cloud3">
+                    ☁️
+                </div>
+
+
+
+                <div id="birdTarget">
+                    ⭐
+                </div>
+
+
+            </div>
+
+
+            <p class="keyboardHint">
+                  🐦 SPACE = Fly Up &nbsp; | &nbsp; ← → = Move
+            </p>
+        </div>
+
+
+
+        <!-- GAME MESSAGE -->
+
+        <div id="message">
+
+            Training started!
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESULT SCREEN
+         ===================================================== -->
+
+    <section
+        id="resultScreen"
+        class="screen hidden">
+
+
+        <div class="resultCard">
+
+
+            <div class="trophy">
+                🏆
+            </div>
+
+
+            <h1>
+                TRAINING COMPLETE!
+            </h1>
+
+
+            <p id="resultAnimal">
+                🐿️ Squirrel
+            </p>
+
+
+
+            <!-- FINAL SCORE -->
+
+            <div class="finalScore">
+
+                <span>
+                    Final Score
+                </span>
+
+
+                <strong id="finalScore">
+                    0
+                </strong>
+
+
+                <span>
+                    / 100
+                </span>
+
+            </div>
+
+
+
+            <!-- PERFORMANCE -->
+
+            <div class="performance">
+
+
+                <h3>
+                    Performance Report
+                </h3>
+
+
+                <div class="progressRow">
+
+                    <span>
+                        Skill
+                    </span>
+
+
+                    <div class="progress">
+
+                        <div id="skillBar">
+                        </div>
+
+                    </div>
+
+
+                    <strong id="skillPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="progressRow">
+
+                    <span>
+                        Speed
+                    </span>
+
+
+                    <div class="progress">
+
+                        <div id="speedBar">
+                        </div>
+
+                    </div>
+
+
+                    <strong id="speedPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="progressRow">
+
+                    <span>
+                        Natural Ability
+                    </span>
+
+
+                    <div class="progress">
+
+                        <div id="naturalBar">
+                        </div>
+
+                    </div>
+
+
+                    <strong id="naturalPercent">
+                        100%
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- USELESSNESS -->
+
+            <div class="uselessness">
+
+
+                <h3>
+                    🤡 USELESSNESS LEVEL
+                </h3>
+
+
+                <div class="uselessBar">
+
+                    <div id="uselessBar">
+                    </div>
+
+                </div>
+
+
+                <strong id="uselessPercent">
+                    100%
+                </strong>
+
+
+            </div>
+
+
+
+            <!-- AI FEEDBACK -->
+
+            <div class="feedback">
+
+
+                <h3>
+                    🤖 AI Training Recommendation
+                </h3>
+
+
+                <p id="feedbackText">
+
+                    Loading useless advice...
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- CERTIFICATE -->
+
+            <div class="certificate">
+
+
+                🏅
+
+
+                <h3 id="certificateTitle">
+
+                    Certified Animal Trainer
+
+                </h3>
+
+
+                <p>
+
+                    This certificate confirms that you
+                    successfully taught an animal something
+                    it already knew.
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <button
+                class="mainButton"
+                onclick="goAnimals()">
+
+                🔄 TRAIN ANOTHER ANIMAL
+
+            </button>
+
+
+            <button
+                class="secondaryButton"
+                onclick="goHome()">
+
+                🏠 HOME
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
+

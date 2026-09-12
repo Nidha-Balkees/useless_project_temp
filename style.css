@@ -1,0 +1,2306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f2;
+    color: #1f2937;
+}
+
+
+/* ================= SCREEN ================= */
+
+.screen {
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================= HOME ================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.logo {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+.hero h1 span {
+    color: #ef4444;
+}
+
+.tagline {
+    margin-top: 15px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    max-width: 550px;
+
+    margin: 20px;
+
+    font-size: 17px;
+
+    color: #6b7280;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.mainButton,
+.secondaryButton,
+.backButton {
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.mainButton {
+    background: #111827;
+    color: white;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+.mainButton:hover {
+    transform: scale(1.05);
+}
+
+.secondaryButton {
+    background: #e5e7eb;
+
+    margin-top: 10px;
+}
+
+.backButton {
+    background: transparent;
+
+    font-size: 15px;
+}
+
+
+/* ================= BADGE ================= */
+
+.uselessBadge {
+    margin-top: 25px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 40px;
+
+    margin-top: 30px;
+}
+
+.container > p {
+    margin: 10px;
+
+    color: #6b7280;
+}
+
+
+/* ================= ANIMAL CARDS ================= */
+
+.animalCards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 50px;
+}
+
+.animalCard {
+    background: white;
+
+    padding: 35px 20px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.animalCard:hover {
+    transform: translateY(-10px);
+}
+
+.animalEmoji {
+    font-size: 75px;
+}
+
+.animalCard h3 {
+    font-size: 25px;
+
+    margin-top: 15px;
+}
+
+.animalCard p {
+    margin: 10px;
+
+    color: #6b7280;
+}
+
+.animalCard span {
+    font-size: 13px;
+
+    color: #ef4444;
+}
+
+
+/* ================= GAME HEADER ================= */
+
+.gameHeader {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.gameHeader h2 {
+    font-size: 30px;
+}
+
+.gameHeader p {
+    color: #6b7280;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    max-width: 800px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.stat {
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 25px;
+
+    margin-top: 5px;
+}
+
+
+/* ================= GAME AREA ================= */
+
+.gameArea {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.instructions {
+    text-align: center;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ================= SQUIRREL GAME ================= */
+
+.tree {
+    position: relative;
+
+    height: 550px;
+
+    background:
+        linear-gradient(
+            #b7e4c7,
+            #74c69d
+        );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.trunk {
+    position: absolute;
+
+    width: 100px;
+
+    height: 100%;
+
+    background: #8b5a2b;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.branch {
+    position: absolute;
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    z-index: 3;
+
+    transition: 0.2s;
+}
+
+.branch:hover {
+    transform: scale(1.2);
+}
+
+.b1 {
+    bottom: 80px;
+    left: 25%;
+}
+
+.b2 {
+    bottom: 170px;
+    left: 60%;
+}
+
+.b3 {
+    bottom: 260px;
+    left: 30%;
+}
+
+.b4 {
+    bottom: 350px;
+    left: 65%;
+}
+
+.b5 {
+    bottom: 440px;
+    left: 40%;
+}
+
+#squirrel {
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 47%;
+
+    font-size: 50px;
+
+    z-index: 5;
+
+    transition:
+        bottom 0.5s,
+        left 0.5s;
+}
+
+
+/* ================= FISH GAME ================= */
+
+.water {
+    position: relative;
+
+    height: 500px;
+
+    background:
+        linear-gradient(
+            #48cae4,
+            #0077b6
+        );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.fish {
+    position: absolute;
+
+    left: 80px;
+    top: 220px;
+
+    font-size: 55px;
+
+    transition:
+        left 0.1s,
+        top 0.1s;
+}
+
+.food {
+    position: absolute;
+
+    right: 70px;
+    bottom: 150px;
+
+    font-size: 45px;
+}
+
+.rock {
+    position: absolute;
+
+    font-size: 50px;
+}
+
+.rock1 {
+    left: 40%;
+    top: 150px;
+}
+
+.rock2 {
+    left: 60%;
+    top: 350px;
+}
+
+.bubble {
+    position: absolute;
+
+    color: white;
+
+    font-size: 40px;
+}
+
+.bubble1 {
+    left: 20%;
+    top: 20%;
+}
+
+.bubble2 {
+    left: 70%;
+    top: 30%;
+}
+
+.bubble3 {
+    left: 40%;
+    top: 60%;
+}
+
+.keyboardHint {
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: #6b7280;
+}
+
+
+/* ================= BIRD GAME ================= */
+
+.sky {
+    position: relative;
+
+    height: 500px;
+
+    background:
+        linear-gradient(
+            #90e0ef,
+            #caf0f8
+        );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#bird {
+    position: absolute;
+
+    left: 100px;
+    top: 220px;
+
+    font-size: 50px;
+
+    transition: top 0.1s;
+}
+
+.cloud {
+    position: absolute;
+
+    font-size: 60px;
+}
+
+.cloud1 {
+    left: 350px;
+    top: 100px;
+}
+
+.cloud2 {
+    left: 550px;
+    top: 300px;
+}
+
+.cloud3 {
+    left: 250px;
+    top: 380px;
+}
+
+#birdTarget {
+    position: absolute;
+
+    right: 80px;
+    top: 220px;
+
+    font-size: 45px;
+}
+
+
+/* ================= MESSAGE ================= */
+
+#message {
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    text-align: center;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+
+/* ================= RESULT ================= */
+
+.resultCard {
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.trophy {
+    font-size: 70px;
+}
+
+.resultCard h1 {
+    margin: 10px;
+}
+
+.finalScore {
+    margin: 30px;
+
+    font-size: 20px;
+}
+
+.finalScore strong {
+    font-size: 60px;
+
+    display: inline-block;
+
+    margin: 0 10px;
+}
+
+
+/* ================= PERFORMANCE ================= */
+
+.performance {
+    text-align: left;
+
+    margin-top: 30px;
+}
+
+.performance h3 {
+    margin-bottom: 20px;
+}
+
+.progressRow {
+    display: grid;
+
+    grid-template-columns: 130px 1fr 50px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 15px 0;
+}
+
+.progress {
+    height: 12px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+
+    width: 0%;
+
+    background: #22c55e;
+
+    transition: width 1s;
+}
+
+
+/* ================= USELESSNESS ================= */
+
+.uselessness {
+    margin-top: 35px;
+}
+
+.uselessBar {
+    height: 20px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 10px 0;
+}
+
+#uselessBar {
+    height: 100%;
+
+    width: 100%;
+
+    background: #ef4444;
+}
+
+
+/* ================= FEEDBACK ================= */
+
+.feedback {
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #fef3c7;
+
+    border-radius: 15px;
+}
+
+.feedback h3 {
+    margin-bottom: 10px;
+}
+
+
+/* ================= CERTIFICATE ================= */
+
+.certificate {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border: 3px dashed #f59e0b;
+
+    border-radius: 15px;
+
+    background: #fffbeb;
+}
+
+.certificate h3 {
+    margin: 10px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .progressRow {
+        grid-template-columns:
+            100px 1fr 40px;
+    }
+
+    .resultCard {
+        padding: 20px;
+    }
+
+}
+/* =====================================================
+   NATURALLY USELESS
+   COMPLETE STYLE SHEET
+===================================================== */
+
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f7f2;
+
+    color: #1f2937;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   SCREEN
+===================================================== */
+
+.screen {
+    min-height: 100vh;
+
+    padding: 30px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.logo {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    animation: floatingLogo 3s ease-in-out infinite;
+}
+
+
+.hero h1 {
+    font-size: 55px;
+
+    letter-spacing: 3px;
+}
+
+
+.hero h1 span {
+    color: #ef4444;
+}
+
+
+.tagline {
+    margin-top: 15px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+.description {
+    max-width: 550px;
+
+    margin: 20px;
+
+    font-size: 17px;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.mainButton,
+.secondaryButton,
+.backButton {
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.mainButton {
+
+    background: #111827;
+
+    color: white;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+
+}
+
+
+.mainButton:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+.secondaryButton {
+
+    background: #e5e7eb;
+
+    margin-top: 10px;
+
+}
+
+
+.secondaryButton:hover {
+
+    transform: scale(1.03);
+
+}
+
+
+.backButton {
+
+    background: transparent;
+
+    font-size: 15px;
+
+}
+
+
+.backButton:hover {
+
+    transform: translateX(-4px);
+
+}
+
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.uselessBadge {
+
+    margin-top: 25px;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.container h2 {
+
+    font-size: 40px;
+
+    margin-top: 30px;
+
+}
+
+
+.container > p {
+
+    margin: 10px;
+
+    color: #6b7280;
+
+}
+
+
+/* =====================================================
+   ANIMAL CARDS
+===================================================== */
+
+.animalCards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 50px;
+
+}
+
+
+.animalCard {
+
+    background: white;
+
+    padding: 35px 20px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+}
+
+
+.animalCard:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.animalEmoji {
+
+    font-size: 75px;
+
+}
+
+
+.animalCard h3 {
+
+    font-size: 25px;
+
+    margin-top: 15px;
+
+}
+
+
+.animalCard p {
+
+    margin: 10px;
+
+    color: #6b7280;
+
+}
+
+
+.animalCard span {
+
+    font-size: 13px;
+
+    color: #ef4444;
+
+}
+
+
+/* =====================================================
+   GAME HEADER
+===================================================== */
+
+.gameHeader {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.gameHeader h2 {
+
+    font-size: 30px;
+
+}
+
+
+.gameHeader p {
+
+    color: #6b7280;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.stat {
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+
+.stat strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================================
+   GAME AREA
+===================================================== */
+
+.gameArea {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.instructions {
+
+    text-align: center;
+
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   SQUIRREL GAME
+===================================================== */
+
+.tree {
+
+    position: relative;
+
+    height: 550px;
+
+    background:
+        linear-gradient(
+            #b7e4c7,
+            #74c69d
+        );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.trunk {
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100%;
+
+    background: #8b5a2b;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+.branch {
+
+    position: absolute;
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    z-index: 3;
+
+    transition: 0.2s;
+
+}
+
+
+.branch:hover {
+
+    transform: scale(1.2);
+
+}
+
+
+.b1 {
+
+    bottom: 80px;
+
+    left: 25%;
+
+}
+
+
+.b2 {
+
+    bottom: 170px;
+
+    left: 60%;
+
+}
+
+
+.b3 {
+
+    bottom: 260px;
+
+    left: 30%;
+
+}
+
+
+.b4 {
+
+    bottom: 350px;
+
+    left: 65%;
+
+}
+
+
+.b5 {
+
+    bottom: 440px;
+
+    left: 40%;
+
+}
+
+
+#squirrel {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 47%;
+
+    font-size: 50px;
+
+    z-index: 5;
+
+    transition:
+        bottom 0.5s,
+        left 0.5s;
+
+}
+
+
+/* =====================================================
+   FISH GAME
+===================================================== */
+
+.water {
+
+    position: relative;
+
+    height: 500px;
+
+    background:
+        linear-gradient(
+            #48cae4,
+            #0077b6
+        );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.fish {
+
+    position: absolute;
+
+    left: 80px;
+
+    top: 220px;
+
+    font-size: 55px;
+
+    transition:
+        left 0.1s,
+        top 0.1s;
+
+}
+
+
+.food {
+
+    position: absolute;
+
+    right: 70px;
+
+    bottom: 150px;
+
+    font-size: 45px;
+
+}
+
+
+.rock {
+
+    position: absolute;
+
+    font-size: 50px;
+
+}
+
+
+.rock1 {
+
+    left: 40%;
+
+    top: 150px;
+
+}
+
+
+.rock2 {
+
+    left: 60%;
+
+    top: 350px;
+
+}
+
+
+.bubble {
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 40px;
+
+}
+
+
+.bubble1 {
+
+    left: 20%;
+
+    top: 20%;
+
+}
+
+
+.bubble2 {
+
+    left: 70%;
+
+    top: 30%;
+
+}
+
+
+.bubble3 {
+
+    left: 40%;
+
+    top: 60%;
+
+}
+
+
+.keyboardHint {
+
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: #6b7280;
+
+}
+
+
+/* =====================================================
+   BIRD GAME
+===================================================== */
+
+.sky {
+
+    position: relative;
+
+    height: 500px;
+
+    background:
+        linear-gradient(
+            #90e0ef,
+            #caf0f8
+        );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+#bird {
+
+    position: absolute;
+
+    left: 100px;
+
+    top: 220px;
+
+    font-size: 50px;
+
+    transition: top 0.1s;
+
+}
+
+
+.cloud {
+
+    position: absolute;
+
+    font-size: 60px;
+
+}
+
+
+.cloud1 {
+
+    left: 350px;
+
+    top: 100px;
+
+}
+
+
+.cloud2 {
+
+    left: 550px;
+
+    top: 300px;
+
+}
+
+
+.cloud3 {
+
+    left: 250px;
+
+    top: 380px;
+
+}
+
+
+#birdTarget {
+
+    position: absolute;
+
+    right: 80px;
+
+    top: 220px;
+
+    font-size: 45px;
+
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+#message {
+
+    max-width: 800px;
+
+    margin: 15px auto;
+
+    text-align: center;
+
+    padding: 15px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   🚨 PLANNING NOTIFICATION
+===================================================== */
+
+.newsToast {
+
+    position: fixed;
+
+    top: 25px;
+
+    right: 25px;
+
+    width: 380px;
+
+    max-width: calc(100vw - 40px);
+
+    background: white;
+
+    border: 4px solid #ef4444;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    z-index: 99999;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.3);
+
+    animation:
+        newsAppear 0.4s ease;
+
+}
+
+
+/* Red warning strip */
+
+.newsToast::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 6px;
+
+    background: #ef4444;
+
+    border-radius:
+        18px 18px 0 0;
+
+}
+
+
+.newsTop {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #dc2626;
+
+}
+
+
+.newsTop strong {
+
+    font-size: 14px;
+
+}
+
+
+.newsTop button {
+
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+.newsTop button:hover {
+
+    background: #fecaca;
+
+}
+
+
+.newsDepartment {
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #6b7280;
+
+}
+
+
+.newsToast h3 {
+
+    margin: 10px 0;
+
+    font-size: 21px;
+
+    color: #111827;
+
+}
+
+
+.newsToast p {
+
+    line-height: 1.5;
+
+    color: #4b5563;
+
+}
+
+
+.newsSource {
+
+    margin-top: 15px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid #e5e7eb;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+
+}
+
+
+/* =====================================================
+   🔴 LIVE NEWS TICKER
+===================================================== */
+
+.newsTicker {
+
+    position: fixed;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    min-height: 48px;
+
+    background: #111827;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    z-index: 99998;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 -5px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.newsTicker strong {
+
+    background: #ef4444;
+
+    padding: 5px 10px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+#tickerText {
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* =====================================================
+   📜 NOTICE HISTORY
+===================================================== */
+
+.historyBox {
+
+    max-width: 800px;
+
+    margin: 30px auto 80px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.historyHeader {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.historyHeader h3 {
+
+    font-size: 20px;
+
+}
+
+
+.historyHeader button {
+
+    border: none;
+
+    background: #f3f4f6;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+.historyHeader button:hover {
+
+    background: #e5e7eb;
+
+}
+
+
+.noticeItem {
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border-left: 4px solid #ef4444;
+
+    background: #f9fafb;
+
+    border-radius: 6px;
+
+    animation:
+        noticeSlide 0.3s ease;
+
+}
+
+
+.noticeItem strong {
+
+    display: block;
+
+    color: #111827;
+
+}
+
+
+.noticeItem small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #6b7280;
+
+}
+
+
+.emptyHistory {
+
+    margin-top: 15px;
+
+    color: #9ca3af;
+
+    font-style: italic;
+
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.resultCard {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.trophy {
+
+    font-size: 70px;
+
+}
+
+
+.resultCard h1 {
+
+    margin: 10px;
+
+}
+
+
+.finalScore {
+
+    margin: 30px;
+
+    font-size: 20px;
+
+}
+
+
+.finalScore strong {
+
+    font-size: 60px;
+
+    display: inline-block;
+
+    margin: 0 10px;
+
+}
+
+
+/* =====================================================
+   PERFORMANCE
+===================================================== */
+
+.performance {
+
+    text-align: left;
+
+    margin-top: 30px;
+
+}
+
+
+.performance h3 {
+
+    margin-bottom: 20px;
+
+}
+
+
+.progressRow {
+
+    display: grid;
+
+    grid-template-columns:
+        130px 1fr 50px;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 15px 0;
+
+}
+
+
+.progress {
+
+    height: 12px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress div {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #22c55e;
+
+    transition:
+        width 1s;
+
+}
+
+
+/* =====================================================
+   USELESSNESS
+===================================================== */
+
+.uselessness {
+
+    margin-top: 35px;
+
+}
+
+
+.uselessBar {
+
+    height: 20px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 10px 0;
+
+}
+
+
+#uselessBar {
+
+    height: 100%;
+
+    width: 100%;
+
+    background: #ef4444;
+
+}
+
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
+
+.feedback {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    background: #fef3c7;
+
+    border-radius: 15px;
+
+}
+
+
+.feedback h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =====================================================
+   CERTIFICATE
+===================================================== */
+
+.certificate {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border: 3px dashed #f59e0b;
+
+    border-radius: 15px;
+
+    background: #fffbeb;
+
+}
+
+
+.certificate h3 {
+
+    margin: 10px;
+
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes floatingLogo {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes newsAppear {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateX(100px)
+            scale(0.95);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes noticeSlide {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateX(-15px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+
+    .screen {
+
+        padding: 20px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .tagline {
+
+        font-size: 19px;
+
+    }
+
+
+    .description {
+
+        font-size: 15px;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .gameHeader {
+
+        align-items: flex-start;
+
+    }
+
+
+    .tree,
+    .water,
+    .sky {
+
+        height: 450px;
+
+    }
+
+
+    .newsToast {
+
+        top: 15px;
+
+        right: 15px;
+
+        width:
+            calc(100vw - 30px);
+
+    }
+
+
+    .newsTicker {
+
+        padding: 10px;
+
+        font-size: 13px;
+
+    }
+
+
+    .historyBox {
+
+        margin-bottom: 75px;
+
+    }
+
+
+    .progressRow {
+
+        grid-template-columns:
+            90px 1fr 40px;
+
+    }
+
+
+    .resultCard {
+
+        padding: 20px;
+
+    }
+
+
+    .finalScore strong {
+
+        font-size: 45px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 450px) {
+
+
+    .hero h1 {
+
+        font-size: 28px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .logo {
+
+        font-size: 55px;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .gameHeader h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .tree,
+    .water,
+    .sky {
+
+        height: 400px;
+
+    }
+
+
+    .newsToast h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .newsToast p {
+
+        font-size: 14px;
+
+    }
+
+
+    .historyHeader {
+
+        align-items: flex-start;
+
+    }
+
+}
+```
